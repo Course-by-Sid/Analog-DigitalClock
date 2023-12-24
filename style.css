@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./wall.png);
+    background-size: cover;
+}
+@keyframes colorChange {
+    0%{border-color: red;}
+    25%{border-color: blue;}
+    50%{border-color: green;}
+    75%{border-color: orange;}
+    100%{border-color: purple;}
+}
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 10px solid red;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    margin-top: -360px;
+    margin-left: 10px;
+    animation: colorChange 5s infinite ;
+}
+#time-container {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #333;
+    width: 40%;
+    margin-left: 60px;
+    margin-top: 50px;
+    border-radius: 10%;
+    color: white;
+    background-color: red;
+}
+.dial {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color: yellow;
+    border-radius: 10%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+}
+
+.dial-12 { left:50%; top: 10px; transform: translateX(-50%); font-size: 14px; font-weight: bold;}
+.dial-3 { right:10px; top: 50%; transform: translateY(-50%); font-size: 14px; font-weight: bold;}
+.dial-6 { left:50%; bottom: 10px; transform: translateX(-50%); font-size: 14px; font-weight: bold;}
+.dial-9 { left:10px; top: 50%; transform: translateY(-50%); font-size: 14px; font-weight: bold;}
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    transform-origin: bottom center;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    transition: transform 0.5s cubic-bezier(0.4,2.3,0.7,1);
+}
+
+.hour-hand {
+    width: 4px;
+    height: 50px;
+    background-color: purple;
+}
+.minute-hand {
+    width: 3px;
+    height: 70px;
+    background-color: black;
+}
+.second-hand {
+    width: 2px;
+    height: 80px;
+    background-color: red;
+}
+.center-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center-circle-white {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.brand {
+    margin-top: 70px;
+    margin-left: 52px;
+    color: blue;
+    font-weight: bolder;
+}
